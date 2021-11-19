@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-filter-item',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filter-item.component.scss']
 })
 export class FilterItemComponent implements OnInit {
-
+  @Input() title: string = ''
+  // @Input() value: number = 0
   constructor() { }
 
   ngOnInit(): void {

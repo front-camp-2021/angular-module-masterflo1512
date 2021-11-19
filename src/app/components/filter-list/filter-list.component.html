@@ -1,1 +1,6 @@
-<p>filter-lis works!</p>
+<div class="category">
+    <h3 className="filter-title">{{title}}</h3>
+    <app-filter-item *ngFor="let item of filterItems" [title]="item">
+
+    </app-filter-item>
+</div>
