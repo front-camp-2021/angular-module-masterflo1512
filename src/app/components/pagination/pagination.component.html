@@ -1,5 +1,5 @@
 <div class="pagination-container">
-    <button class="btn-pagination">
+    <button class="btn-pagination" (click)="goToThePreviousPage()" [disabled]="currentPage === 1">
         <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M20.0866 40C31.1801 40 40.1732 31.0457 40.1732 20C40.1732 8.9543 31.1801 0 20.0866 0C8.99308 0 0 8.9543 0 20C0 31.0457 8.99308 40 20.0866 40Z"
@@ -9,10 +9,12 @@
         </svg>
     </button>
     <ul class="pagination-list">
-        <li *ngFor="let page of pages" class="pagination-item"><a href="#">1</a></li>
-
+        <li
+            *ngFor="let page of numberOfPages"
+            [ngClass]="{'pagination-item': true, active: page === currentPage}"
+        ><a href="#" (click)="setCurrentPage($event, page)">{{page}}</a></li>
     </ul>
-    <button class="btn-pagination">
+    <button class="btn-pagination" (click)="goToTheNextPage()" [disabled]="currentPage === numberOfPages.length">
         <svg width="42" height="40" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M20.9487 40C32.0422 40 41.0353 31.0457 41.0353 20C41.0353 8.9543 32.0422 0 20.9487 0C9.85514 0 0.862061 8.9543 0.862061 20C0.862061 31.0457 9.85514 40 20.9487 40Z"

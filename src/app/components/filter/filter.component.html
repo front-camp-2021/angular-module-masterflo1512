@@ -48,11 +48,11 @@
         </div>
         <div class="divider"></div>
         <div class="category">
-            <app-filter-list [filterItems]="categories" [title]="'Categories'"></app-filter-list>
+            <app-filter-list (onChange)="onCategoriesChange($event)" [filterItems]="categories" [title]="'Categories'"></app-filter-list>
         </div>
         <div class="divider"></div>
         <div class="brand">
-            <app-filter-list [filterItems]="brands" [title]="'Brand'"></app-filter-list>
+            <app-filter-list (onChange)="onBrandsChange($event)" [filterItems]="brands" [title]="'Brand'"></app-filter-list>
         </div>
     </div>
     <div class="btn">

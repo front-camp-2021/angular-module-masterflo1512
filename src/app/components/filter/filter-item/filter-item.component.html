@@ -1,7 +1,6 @@
 <div class="form-checkbox-category">
     <label>
-        <input type="checkbox" name="category" />
+        <input type="checkbox" name="category" (change)="handleonChange($event)" />
         {{title}}
     </label>
-    <!-- <span class="amount">{{value}}</span> -->
 </div>
