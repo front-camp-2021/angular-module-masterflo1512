@@ -10,6 +10,7 @@ import { ProductsService } from '../../services/products.service';
 export class SearchComponent implements OnInit {
   numberOfProducts: number = 0;
   search = '';
+
   constructor(
     private productsService: ProductsService,
     private filtersService: FiltersService

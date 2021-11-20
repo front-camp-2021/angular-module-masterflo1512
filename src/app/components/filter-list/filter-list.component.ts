@@ -7,7 +7,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class FilterListComponent implements OnInit {
   @Input() filterItems: string[] = [];
-  @Input() title: string = 'Category';
+  @Input() selectedItems: string[] = [];
+  @Input() title: string = '';
   @Output() onChange = new EventEmitter<string[]>();
 
   constructor() {}

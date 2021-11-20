@@ -42,4 +42,13 @@ export class FiltersService {
       this.currentPage.next(1);
     });
   }
+
+  reset() {
+    this.currentPage.next(1);
+    this.search.next('');
+    this.brands.next([]);
+    this.categories.next([]);
+    this.priceRange.next([0, 85000]);
+    this.ratingRange.next([0, 5]);
+  }
 }

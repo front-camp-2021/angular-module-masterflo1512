@@ -1,5 +1,9 @@
 <div class="category">
     <h3 class="filter-title">{{title}}</h3>
-    <app-filter-item *ngFor="let item of filterItems" (onChange)="onChange.next($event)" [title]="item">
-    </app-filter-item>
+    <app-filter-item
+        *ngFor="let item of filterItems"
+        (onChange)="onChange.next($event)"
+        [title]="item"
+        [selectedItems]="selectedItems"
+    ></app-filter-item>
 </div>

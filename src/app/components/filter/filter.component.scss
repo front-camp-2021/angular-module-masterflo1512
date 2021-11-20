@@ -1,4 +1,3 @@
-
 .filters-header {
     width: 100%;
     margin-bottom: 20px;
@@ -9,7 +8,6 @@
 
 h2 {
     font-weight: 400;
-    font-size: 18px;
     line-height: 21px;
     color: #2c2c2c;
 }
@@ -59,34 +57,9 @@ h3 {
     margin-right: 15px;
 }
 
-.form-checkbox-category {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.form-checkbox-category>label>input {
-    margin-right: 20px;
-}
-
-input[type="checkbox"], input[type="radio"] {
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    border-radius: 2px;
-    border: 1px solid gray;
-}
-
-input:checked {
-    background: #6f64f8;
-}
-
-input[type="radio"] {
-    border-radius: 50%;
-    width: 16px;
-}
-
 .btn-filters {
+    text-transform: uppercase;
+    color: #fff;
     width: 100%;
     margin: 20px 0;
     padding: 20px;

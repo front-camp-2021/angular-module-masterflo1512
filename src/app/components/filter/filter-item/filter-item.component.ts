@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FiltersService } from 'src/app/services/filters.service';
 
 export function getId(filterName: string) {
   return filterName.toLowerCase().split(' ').join('_');
@@ -12,14 +11,17 @@ export function getId(filterName: string) {
 })
 export class FilterItemComponent implements OnInit {
   @Input() title: string = '';
+  @Input() selectedItems: string[] = [];
   @Output() onChange = new EventEmitter<string[]>();
-
-  constructor(private filtersService: FiltersService) {}
 
   ngOnInit(): void {}
 
-  handleonChange(e: Event) {
-    const selectedFilter = this.filtersService.brands.getValue();
+  isChecked() {
+    return this.selectedItems.includes(getId(this.title));
+  }
+
+  handleOnChange(e: Event) {
+    const selectedFilter = this.selectedItems;
     if ((e.target as HTMLInputElement).checked) {
       this.onChange.next(selectedFilter.concat(getId(this.title)));
     } else {

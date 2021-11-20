@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import "~bootstrap/scss/bootstrap-reboot";
+@import "~bootstrap/scss/bootstrap-grid";
 
 * {
     margin: 0;
@@ -24,4 +26,13 @@ body {
 
 .container {
     max-width: 1846px !important;
+}
+
+.ngx-slider .ngx-slider-selection {
+  background: #6F64F8 !important;
+}
+
+.ngx-slider-pointer-min, .ngx-slider-pointer-max {
+  background: #6F64F8 !important;
+  outline: none;
 }
