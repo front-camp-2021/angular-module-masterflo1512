@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import "~bootstrap/scss/bootstrap-reboot";
+@import "~bootstrap/scss/bootstrap-grid";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body, button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body {
+    background: #F9F9F9;
+}
+
+.container {
+    max-width: 1846px !important;
+}
+
+.ngx-slider .ngx-slider-selection {
+  background: #6F64F8 !important;
+}
+
+.ngx-slider-pointer-min, .ngx-slider-pointer-max {
+  background: #6F64F8 !important;
+  outline: none;
+}

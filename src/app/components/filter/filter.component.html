@@ -1,0 +1,42 @@
+<div class="filters-container">
+    <div class="filters-header">
+        <h2>Filters</h2>
+        <button class="collapse-filters-btn">
+            <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.90919 1.01861L1.12124 6.51335L6.88861 12.0297" stroke="black" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M6.90919 1.01861L1.12124 6.51335L6.88861 12.0297" stroke="black" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+    <div class="filters">
+        <h3 class="filter-title">Price</h3>
+        <ngx-slider
+            [(value)]="filtersService.priceRange.getValue()[0]"
+            [(highValue)]="filtersService.priceRange.getValue()[1]"
+            [options]="priceSliderOptions"
+            (userChangeEnd)="onPriceChanged($event)"
+        ></ngx-slider>
+        <h3 class="filter-title" style="margin-top: 20px">Rating</h3>
+        <ngx-slider
+            [(value)]="filtersService.ratingRange.getValue()[0]"
+            [(highValue)]="filtersService.ratingRange.getValue()[1]"
+            [options]="ratingSliderOptions"
+            (userChangeEnd)="onRatingChanged($event)"
+        ></ngx-slider>
+        <div class="divider"></div>
+        <div class="category">
+            <app-filter-list (onChange)="onCategoriesChange($event)" [filterItems]="categories" [selectedItems]="filtersService.categories.getValue()" [title]="'Categories'"></app-filter-list>
+        </div>
+        <div class="divider"></div>
+        <div class="brand">
+            <app-filter-list (onChange)="onBrandsChange($event)" [filterItems]="brands" [selectedItems]="filtersService.brands.getValue()" [title]="'Brand'"></app-filter-list>
+        </div>
+    </div>
+    <div class="btn">
+        <button class="btn-filters" (click)="clearFilters()">
+            <span class="btnfilters-header-title">clear all filters</span>
+        </button>
+    </div>
+</div>

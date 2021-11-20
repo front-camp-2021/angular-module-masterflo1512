@@ -1,0 +1,5 @@
+<div class="product-list row">
+    <app-card *ngFor="let product of products" [id]="product.id" [images]="product.images" [title]="product.title"
+        [rating]="product.rating" [price]="product.price" [category]="product.category" [brand]="product.brand">
+    </app-card>
+</div>
